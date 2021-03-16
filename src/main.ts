@@ -1,3 +1,4 @@
+
 const { app, BrowserWindow } = require('electron')
 
 function createWindow () {
@@ -10,7 +11,7 @@ function createWindow () {
         }
     })
 
-    win.loadFile('index.html')
+    win.loadFile("index.html")
 }
 
 app.whenReady().then(createWindow)
