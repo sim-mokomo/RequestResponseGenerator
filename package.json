@@ -1,0 +1,24 @@
+{
+  "name": "RequestResponseGenerator",
+  "version": "1.0.0",
+  "description": "言語ごとのReq/Resを自動生成",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "electron ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sim-mokomo/RequestResponseGenerator.git"
+  },
+  "keywords": [],
+  "author": "sim-mokomo",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sim-mokomo/RequestResponseGenerator/issues"
+  },
+  "homepage": "https://github.com/sim-mokomo/RequestResponseGenerator#readme",
+  "devDependencies": {
+    "electron": "^12.0.1"
+  }
+}
