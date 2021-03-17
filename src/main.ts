@@ -1,7 +1,7 @@
 import electron from "electron"
 
 function createWindow () {
-    const win : electron.BrowserWindow = new electron.BrowserWindow({
+    const window : electron.BrowserWindow = new electron.BrowserWindow({
         width: 800,
         height: 600,
         webPreferences: {
@@ -9,7 +9,8 @@ function createWindow () {
         }
     })
 
-    void win.loadFile("index.html")
+    window.removeMenu()
+    void window.loadFile('src/views/index.html')
 }
 
 
