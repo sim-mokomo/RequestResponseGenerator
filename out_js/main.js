@@ -1,7 +1,11 @@
 "use strict";
-var _a = require('electron'), app = _a.app, BrowserWindow = _a.BrowserWindow;
+var __importDefault = (this && this.__importDefault) || function (mod) {
+    return (mod && mod.__esModule) ? mod : { "default": mod };
+};
+Object.defineProperty(exports, "__esModule", { value: true });
+var electron_1 = __importDefault(require("electron"));
 function createWindow() {
-    var win = new BrowserWindow({
+    var win = new electron_1.default.BrowserWindow({
         width: 800,
         height: 600,
         webPreferences: {
@@ -9,16 +13,16 @@ function createWindow() {
             contextIsolation: false,
         }
     });
-    win.loadFile("index.html");
+    void win.loadFile("index.html");
 }
-app.whenReady().then(createWindow);
-app.on('window-all-closed', function () {
+void electron_1.default.app.whenReady().then(createWindow);
+electron_1.default.app.on('window-all-closed', function () {
     if (process.platform !== 'darwin') {
-        app.quit();
+        electron_1.default.app.quit();
     }
 });
-app.on('activate', function () {
-    if (BrowserWindow.getAllWindows().length === 0) {
+electron_1.default.app.on('activate', function () {
+    if (electron_1.default.BrowserWindow.getAllWindows().length === 0) {
         createWindow();
     }
 });

@@ -1,8 +1,7 @@
-
-const { app, BrowserWindow } = require('electron')
+import electron from "electron"
 
 function createWindow () {
-    const win = new BrowserWindow({
+    const win : electron.BrowserWindow = new electron.BrowserWindow({
         width: 800,
         height: 600,
         webPreferences: {
@@ -11,17 +10,18 @@ function createWindow () {
         }
     })
 
-    win.loadFile("index.html")
+    void win.loadFile("index.html")
 }
 
-app.whenReady().then(createWindow)
-app.on('window-all-closed', () => {
+
+void electron.app.whenReady().then(createWindow)
+electron.app.on('window-all-closed', () => {
     if (process.platform !== 'darwin') {
-        app.quit()
+        electron.app.quit()
     }
 })
-app.on('activate', () => {
-    if (BrowserWindow.getAllWindows().length === 0) {
+electron.app.on('activate', () => {
+    if (electron.BrowserWindow.getAllWindows().length === 0) {
         createWindow()
     }
 })
