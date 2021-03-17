@@ -25,3 +25,7 @@ electron.app.on('activate', () => {
         createWindow()
     }
 })
+
+electron.ipcMain.on("click",(event, args) => {
+    //TODO: 属性追加
+})

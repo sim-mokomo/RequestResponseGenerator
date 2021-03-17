@@ -6,11 +6,19 @@
     <meta http-equiv="Content-Security-Policy" content="script-src 'self' 'unsafe-inline';" />
 </head>
 <body style="background: white;">
-<h1>Hello World!</h1>
-<p>
-    We are using node <script>document.write(process.versions.node)</script>,
-    Chrome <script>document.write(process.versions.chrome)</script>,
-    and Electron <script>document.write(process.versions.electron)</script>.
-</p>
+    <div>
+        <label>出力先パス<input type="text"></label>
+
+        <div class="attribute_container">
+            // TODO: 属性を表示
+            <div class="attribute">
+                <label>属性1</label>
+                <input type="text">
+                <input type="text">
+            </div>
+        </div>
+
+        <input type="submit" value="作成">
+    </div>
 </body>
 </html>
